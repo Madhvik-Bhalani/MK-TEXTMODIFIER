@@ -1,0 +1,10 @@
+.capit {
+  text-transform: capitalize;
+}
+#txtbox{
+    transition-property: box-shadow;
+    transition-duration: .4s;
+}
+#txtbox:hover{
+ box-shadow: 1.5px 1.5px 1.3px 1.3px rgb(220, 72, 243);   
+}
