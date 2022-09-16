@@ -69,20 +69,16 @@ export default function App() {
     <>
 
       <Router>
-
-        <Navbar title={"Mk_TextUtils"} about={"About Us"} mode={mode} toggleMode={toggleMode} />
+        <Navbar title={"Mk_TextAnalyser"} about={"About Us"} mode={mode} toggleMode={toggleMode} />
         <Alert1 alert={alert} disalert={disalert} />
         <div className="container">
           <Alert2 alert={alert2} dismis={dismis} />
           <Routes>
-            <Route path="/about" element={<About mode={mode} />} />
-
-
-            <Route path="/" element={<TextForm head={"text analyser"} mode={mode} disalert2={disalert2} />
+            <Route exact path="/about" element={<About mode={mode} />} />
+            <Route exact path="/" element={<TextForm head={"text analyser"} mode={mode} disalert2={disalert2} />
             } />
           </Routes>
         </div>
-
       </Router>
     </>
   )

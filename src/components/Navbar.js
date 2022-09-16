@@ -15,23 +15,32 @@ export default function Navbar(props) {
         setTimeout(() => {
 
             document.title = "MK-Text Analyser"
-        }, 1700);
+        }, 1200);
+    }
+
+    // about-btn handle
+    const aboutHandler=()=>{
+        document.title="MK-About"
+    }
+    // home-btn handle
+    const homeHandler=()=>{
+        document.title="MK-Home"
     }
     return (
         <>
             <nav className={`navbar navbar-expand-lg bg-${props.mode === "dark" ? "dark" : "light"}`}>
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/" style={{ color: props.mode === "dark" ? "white" : "black" }}>{props.title}</Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon" style={{marginTop:"7px",color:props.mode==="light"?"balck":"white"}}>&#9776;</span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent" >
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0" >
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/" style={{ color: props.mode === "dark" ? "white" : "black" }}>Home</Link>
+                                <Link className="nav-link active" aria-current="page" to="/" style={{ color: props.mode === "dark" ? "white" : "black" }} onClick={homeHandler}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about" style={{ color: props.mode === "dark" ? "white" : "black" }}>{props.about}</Link>
+                                <Link className="nav-link" to="/about" style={{ color: props.mode === "dark" ? "white" : "black" }} onClick={aboutHandler}>{props.about} </Link>
                             </li>
 
 
