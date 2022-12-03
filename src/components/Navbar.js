@@ -11,11 +11,8 @@ export default function Navbar(props) {
 
             setModebtn("Enable Dark Mode")
         }
-        document.title = "MK-Dark Mode"
-        setTimeout(() => {
-
-            document.title = "MK-Text Analyser"
-        }, 1200);
+        // document.title = "MK-Dark Mode"
+        
     }
 
     // about-btn handle
